@@ -9,6 +9,6 @@ This project is done in R.
 Movie box office: [Box Office Mojo](http://www.boxofficemojo.com/daily/?view=bymovie&yr=all&sort=title&order=ASC&p=.htm)  
 Movie reviews (from Amazon): [Dr. Julian McAuley's Amazon product data](http://jmcauley.ucsd.edu/data/amazon/)  
 Reference:  
-*Image-based recommendations on styles and substitutes*; J. McAuley, C. Targett, J. Shi, A. van den Hengel; **SIGIR**, 2015  
-*Inferring networks of substitutable and complementary products*; J. McAuley, R. Pandey, J. Leskovec; **Knowledge Discovery and Data Mining**, 2015  
+*Image-based recommendations on styles and substitutes*; J. McAuley, C. Targett, J. Shi, A. van den Hengel; *SIGIR*, 2015  
+*Inferring networks of substitutable and complementary products*; J. McAuley, R. Pandey, J. Leskovec; *Knowledge Discovery and Data Mining*, 2015  
 Inflation rate: [US Inflation Calculator](http://www.usinflationcalculator.com/inflation/historical-inflation-rates/)
