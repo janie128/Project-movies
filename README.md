@@ -3,6 +3,8 @@
   
 This project aims to find the correlation between movie box office gross and movie reviews (from Amazon). Various features from the movie reviews are extracted, including: average review score, review length, review sentiment score and number of reviews. Models are fitted and used to project box office gross.  
   
+A report detailing the analysis done in this project can be found [here](http://nbviewer.jupyter.org/github/janie128/Project-movies/blob/master/Box_Office_Predictions.ipynb)
+  
 This project is done in R.  
   
 #### Data source:
