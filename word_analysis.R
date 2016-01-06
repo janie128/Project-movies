@@ -206,4 +206,5 @@ wordAnalysisFn <- function(reviewsTitles){
   colnames(finalTFIDF) <- c("goodTFIDF", "badTFIDF")
   
   return(finalTFIDF)
+  
 }
