@@ -7,7 +7,8 @@ source('./clean_explore_BOdata.R', echo=FALSE)
 boxOffice <- cleaningBOFn(boxOfficeRaw)
 
 # Call script to match product titles in metadata file to movie titles in box office data
-noTvMetadata <- 
+source('./parse_real_title.R', echo=FALSE)
+noTvMetadata <- realTitle(boxOffice)
   
 # Call script to clean reviews + metadata files
 source('./clean_reviewsTitles.R', echo=FALSE)
@@ -18,9 +19,5 @@ source('./feature_extraction.R', echo=FALSE)
 final <- extractFeatures(reviewsTitles)
 
 # Call script for modelling and prediction
+source('./machine_learning.R', echo=FALSE)
 
-
-
-
-#g <- ggplot(filter(final, (reviewCount>50 & reviewCount<2000)), aes(x=goodAvgTFIDF, y=log10(adjGross), colour=adjGross))
-#g + geom_point() + scale_color_gradient(low="green", high="red")
