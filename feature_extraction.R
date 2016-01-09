@@ -40,6 +40,7 @@ extractFeatures <- function(reviewsTitles){
   reviewStar$totalCount <- NULL
   
   # ---------Call wordAnalysisFn to generate good and bad words TFIDF for each review
+  source('./word_analysis.R', echo=FALSE)
   finalTFIDF <- wordAnalysisFn(reviewsTitles)
   reviewsTitles <- cbind(reviewsTitles, finalTFIDF)
   
