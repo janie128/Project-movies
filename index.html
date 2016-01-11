@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Project-movies by janie128</title>
+    <title>Data Science Project: Box Office Prediction by janie128</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,8 +11,8 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Project-movies</h1>
-      <h2 class="project-tagline">Data science project of predicting box office gross with movie reviews</h2>
+      <h1 class="project-name">Data Science Project: Box Office Prediction</h1>
+      <h2 class="project-tagline">From Movie Reviews to Box Office</h2>
       <a href="https://github.com/janie128/Project-movies" class="btn">View on GitHub</a>
       <a href="https://github.com/janie128/Project-movies/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/janie128/Project-movies/tarball/master" class="btn">Download .tar.gz</a>
@@ -20,29 +20,47 @@
 
     <section class="main-content">
       <h1>
-<a id="project-movies" class="anchor" href="#project-movies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project-movies</h1>
+<a id="data-science-project-box-office-prediction" class="anchor" href="#data-science-project-box-office-prediction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Science Project: Box Office Prediction</h1>
 
 <h3>
-<a id="data-science-project-of-predicting-box-office-gross-with-movie-reviews" class="anchor" href="#data-science-project-of-predicting-box-office-gross-with-movie-reviews" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data science project of predicting box office gross with movie reviews</h3>
+<a id="from-movie-reviews-to-box-office" class="anchor" href="#from-movie-reviews-to-box-office" aria-hidden="true"><span class="octicon octicon-link"></span></a>From Movie Reviews to Box Office</h3>
 
-<p>This project aims to find the correlation between movie box office gross and movie reviews (from Amazon). Various features from the movie reviews are extracted, including: average review score, review length, review sentiment score and number of reviews. Models are fitted and used to project box office gross.  </p>
+<p>This project aims to explore the correlation between movie box office and Amazon movie reviews, and develop predictive models for projecting the overall movie box office. Various features from the movie reviews are extracted, including: review ratings distribution statistics, review length, review sentiment score and number of reviews. Machine learning models are trained and used to project box office gross.  </p>
 
-<p>A report detailing the analysis done in this project can be found <a href="http://nbviewer.jupyter.org/github/janie128/Project-movies/blob/master/Box_Office_Predictions.ipynb">here</a></p>
+<p>There are three main parts to this project: 1) data scraping and cleaning, 2) feature extraction, and 3) prediction modeling. A report detailing the analysis done in this project can be found <a href="http://nbviewer.jupyter.org/github/janie128/Project-movies/blob/master/Box_Office_Predictions.ipynb" target="_blank">here</a>.</p>
 
-<p>This project is done in R.  </p>
+<p>This project is done in R. All codes can be found in this repository.   </p>
 
 <h4>
-<a id="data-source" class="anchor" href="#data-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data source:</h4>
+<a id="file-descriptions" class="anchor" href="#file-descriptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>File descriptions:</h4>
 
-<p>Movie box office: <a href="http://www.boxofficemojo.com/daily/?view=bymovie&amp;yr=all&amp;sort=title&amp;order=ASC&amp;p=.htm">Box Office Mojo</a><br>
-Movie reviews (from Amazon): <a href="http://jmcauley.ucsd.edu/data/amazon/">Dr. Julian McAuley's Amazon product data</a><br>
-Reference:<br>
-<em>Image-based recommendations on styles and substitutes</em>; J. McAuley, C. Targett, J. Shi, A. van den Hengel; <em>SIGIR</em>, 2015<br>
-<em>Inferring networks of substitutable and complementary products</em>; J. McAuley, R. Pandey, J. Leskovec; <em>Knowledge Discovery and Data Mining</em>, 2015<br>
-Inflation rate: <a href="http://www.usinflationcalculator.com/inflation/historical-inflation-rates/">US Inflation Calculator</a></p>
+<p><code>main.R</code> is the main script that calls for all parts of the analysis.<br>
+<code>box_office_mojo_scraping.R</code> conducts web scraping to acquire box office data.<br>
+<code>clean_explore_BOdata.R</code> performs data cleaning and exploratory data analysis of box office data.<br>
+<code>generate_strict_json.py</code> parses and outputs original Amazon review data into strict JSON format for R parsing.<br>
+<code>parse_real_title</code> contains function for title matching between movie titles from box office data and product titles from Amazon review data.<br>
+<code>clean_reviewsTitles.R</code> performs data merging and cleaning of review data.<br>
+<code>feature_extraction.R</code> extracts features to be used in modeling.<br>
+<code>word_analysis.R</code> contains function used in feature extraction to perform text analysis and natural language processing on reviews.<br>
+<code>machine_learning.R</code> trains different learning machine learning models for prediction modeling.  </p>
+
+<h4>
+<a id="data-sources" class="anchor" href="#data-sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data sources:</h4>
+
+<p>Movie box office: <a href="http://www.boxofficemojo.com/daily/?view=bymovie&amp;yr=all&amp;sort=title&amp;order=ASC&amp;p=.htm" target="_blank">Box Office Mojo</a><br>
+Movie reviews (from Amazon): <a href="http://jmcauley.ucsd.edu/data/amazon/" target="_blank">Dr. Julian McAuley's Amazon product data</a><br>
+Inflation data: <a href="http://www.usinflationcalculator.com/inflation/historical-inflation-rates/" target="_blank">US Inflation Calculator</a><br>
+Sentiment analysis dictionary: <a href="https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html#lexicon" target="_blank">Hu and Liu's Opinion Lexicon</a>  </p>
+
+<h4>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References:</h4>
+
+<p>"Image-based recommendations on styles and substitutes" J. McAuley, C. Targett, J. Shi, A. van den Hengel; <em>SIGIR</em>, 2015<br>
+"Inferring networks of substitutable and complementary products" J. McAuley, R. Pandey, J. Leskovec; <em>Knowledge Discovery and Data Mining</em>, 2015<br>
+"Mining and Summarizing Customer Reviews" M. Hu, B. Liu; <em>Proceedings of the ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD-2004)</em>, Aug 22-25, 2004, Seattle, Washington, USA  </p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/janie128/Project-movies">Project-movies</a> is maintained by <a href="https://github.com/janie128">janie128</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/janie128/Project-movies">Data Science Project: Box Office Prediction</a> is maintained by <a href="https://github.com/janie128">janie128</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
